@@ -2,7 +2,6 @@ var circles = document.getElementById('circles');
 var initials = '';
 //connect to socket.io
 var socket = io(); 
-console.log(socket) 
 // listen to the server for the `add-circle` event
 socket.on('add-circle', function (data) {
     addCircle(data);
@@ -14,7 +13,7 @@ circles.addEventListener('click', function(evt) {
       initials: initials,
       x: evt.clientX,
       y: evt.clientY,
-      dia: randomBetween(10,100),
+      dia: randomBetween(10,125),
       rgba: getRandomRGBA()
   });
 });
